@@ -1,4 +1,6 @@
-/* ---- Base ---- */
+/* === Base Setup === */
+* { box-sizing: border-box; }
+
 body {
   background-color: #FCEBB6;
   color: #221811;
@@ -11,102 +13,127 @@ body {
   padding: 0;
 }
 
-header {
-  color: #8C3826;
-  background-color: #D2B48C;
-  text-align: center;
-  padding: 5px 0;
-}
-
-h1 {
-  line-height: 200%;
-  font-family: 'Lora', serif;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-h2 {
-  color: #8C3826;
-  font-family: 'Lora', serif;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-nav { text-align: center; font-weight: bold; }
-nav a { text-decoration: none; }
-
-footer {
-  background-color: #D2B48C;
-  font-size: 0.60em;
-  font-style: italic;
-  text-align: center;
-  padding: 1em;
-  border-top: 2px solid #8C3826;
-}
-
 #wrapper {
   width: 80%;
   max-width: 1280px;
   min-width: 900px;
-  background-color: #FEFAEB;
   margin: 0 auto;
+  background-color: #231814;
   box-shadow: 0 10px 24px rgba(0,0,0,.18);
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('../fonts/Lora-Regular.woff') format('woff');
-}
-
-/* ---- Images / layout ---- */
-#homehero {
-  height: 300px;
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
   padding: 0;
 }
 
-#menumug {
-  float: right;
-  width: 400px;
-  height: 299px;
-  background-image: url("../images/mugs.jpg");
-  background-size: cover;
-  background-position: center;
+header {
+  background-image: url("../images/coffeelogo.jpg");
   background-repeat: no-repeat;
-  margin: 0 0 1em 1em;
-}
-
-main::after { content: ""; display: block; clear: both; }
-
-.details {
-  padding-left: 20%;
-  padding-right: 20%;
-  margin-bottom: 1.5em;
-}
-
-.details img {
-  width: 100px;
-  height: 100px;
-  border: none;
-  margin: 0 10px 10px 0;
-  vertical-align: middle;
-}
-.details a { text-decoration: none; }
-
-h4 {
+  background-position: 40px center;   
+  background-size: 90px auto;         
   background-color: #D2B48C;
-  font-size: 1.2em;
-  padding: .5em;
-  margin-bottom: .5em;
-  color: #221811;
+  color: #231814;
+  font-family: 'Lora', serif;
+  font-size: 1.8em;
+  padding: 25px 0 25px 170px;         
+  border-bottom: 4px solid #231814;
+  margin: 0;
 }
 
-img {
-  border-style: none;
-  max-width: 100%;
-  height: auto;
+header h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+header a:link, 
+header a:visited {
+  text-decoration: none;
+  color: #231814;
+}
+header a:hover {
+  color: #FEF6C2;
+}
+
+nav {
+  float: left;
+  width: 200px;
+  background-color: #231814;
+  padding-top: 2em;
+  text-align: center;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+nav li {
+  margin: 1em 0;
+}
+nav a:link { color: #FEF6C2; }
+nav a:visited { color: #D2B48C; }
+nav a:hover { color: #CC9933; }
+
+main {
+  margin-left: 200px;
+  background-color: #FEF6C2;
+  overflow: auto;
+  padding-bottom: 2em;
+}
+main h2, main h3, main h4, main p, main div, main ul, main dl {
+  padding-left: 3em;
+  padding-right: 2em;
+}
+
+#homehero, #heromugs, #heroguitar {
+  height: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 4px solid #231814;
+}
+
+#homehero   { background-image: url("../images/hero.jpg"); }
+#heromugs   { background-image: url("../images/heromugs.jpg"); }
+#heroguitar { background-image: url("../images/heroguitar.jpg"); }
+
+/* === Section Titles (Months) === */
+h4 {
+  text-transform: uppercase;
+  background-color: #D2B48C;
+  color: #231814;
+  font-weight: bold;
+  padding: 0.5em 3em;
+  margin: 0;
+  border-bottom: 1px solid #231814;
+  border-top: 1px solid #231814;
+  clear: left;
+}
+
+.floatleft {
+  float: left;
+  margin: 0 1em 1em 3em;
+  padding: 0;
+}
+.details {
+  overflow: auto;
+}
+.details p {
+  padding-top: 1em;
+}
+
+.onethird {
+  float: left;
+  width: 33%;
+}
+
+footer {
+  clear: both;
+  background-color: #D2B48C;
+  text-align: center;
+  padding: 0.75em;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #231814;
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  color: #8C3826;
 }
